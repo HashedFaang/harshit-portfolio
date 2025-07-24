@@ -121,3 +121,50 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+/* Theme toggle button */
+.theme-toggle {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #e0e7ff;
+  border: none;
+  border-radius: 6px;
+  color: #333;
+}
+
+.theme-toggle:hover {
+  background-color: #c7d2fe;
+}
+
+/* Dark mode */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+}
+
+body.dark-theme nav {
+  background-color: #222;
+}
+
+body.dark-theme nav a {
+  color: #fff;
+}
+
+body.dark-theme nav a:hover {
+  background-color: #4f46e5;
+}
+
+body.dark-theme section,
+body.dark-theme .project-card {
+  background-color: #2b2b2b;
+  color: #f4f4f4;
+}
+
+body.dark-theme .project-card {
+  border-left-color: #6366f1;
+}
+
+body.dark-theme .profile-pic {
+  border-color: #6366f1;
+}
