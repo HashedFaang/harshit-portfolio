@@ -1,4 +1,4 @@
-/* Reset & base styles */
+/* Base styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -86,6 +86,32 @@ h2 {
   margin-right: 10px;
   color: #4f46e5;
   width: 20px;
+}
+
+/* Projects dashboard cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background-color: #fff;
+  border-left: 6px solid #4f46e5;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #4f46e5;
 }
 
 /* Footer */
