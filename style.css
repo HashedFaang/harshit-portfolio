@@ -1,11 +1,14 @@
-/* Reset & base styles */
+/* Base & Smooth transition */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Header */
@@ -23,7 +26,7 @@ header {
   color: #e0e7ff;
 }
 
-/* Theme Toggle Button (top-right, icon only) */
+/* Theme Toggle */
 .theme-toggle {
   position: absolute;
   top: 20px;
@@ -31,9 +34,8 @@ header {
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: #fff;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  color: #fff;
 }
 
 body:not(.dark-theme) .theme-toggle {
@@ -56,11 +58,11 @@ nav a {
   color: #fff;
   padding: 1rem;
   text-decoration: none;
-  transition: background 0.2s;
 }
 
 nav a:hover {
   background-color: #4f46e5;
+  text-decoration: underline;
 }
 
 /* Sections */
@@ -110,7 +112,7 @@ h2 {
   width: 20px;
 }
 
-/* Projects dashboard cards */
+/* Projects Grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -123,12 +125,12 @@ h2 {
   border-left: 6px solid #4f46e5;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .project-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
@@ -144,7 +146,7 @@ footer {
   padding: 1rem;
 }
 
-/* Dark Theme Styles */
+/* Dark Theme */
 body.dark-theme {
   background-color: #1a1a1a;
   color: #f4f4f4;
@@ -174,4 +176,12 @@ body.dark-theme .project-card {
 
 body.dark-theme .profile-pic {
   border-color: #6366f1;
+}
+
+body.dark-theme a {
+  color: #93c5fd;
+}
+
+body.dark-theme a:hover {
+  color: #bfdbfe;
 }
