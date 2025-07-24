@@ -6,12 +6,13 @@
   <title>Harshit Mohan | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
     <h1>Harshit Mohan</h1>
     <p class="tagline">Aspiring Data Scientist</p>
- <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">🌙</button>
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">🌙</button>
   </header>
 
   <nav>
@@ -19,7 +20,7 @@
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <a href="assets/HarshitResume.pdf" download>Download Resume</a>
+    <a href="assets/HarshitResume.pdf" download>Resume</a>
   </nav>
 
   <section id="about">
@@ -63,6 +64,10 @@
       <div class="project-card">
         <h3>🎬 Netflix Data Analysis</h3>
         <p>Used Pandas and Matplotlib to analyze and visualize Netflix watch patterns.</p>
+      <div class="project-card">
+        <h3>🧑‍💻 Coders of Delhi</h3>
+        <p>Contributed to a community-led project under Coders of Delhi. Built UI elements and participated in open source collaboration with young developers.</p>
+      </div>
       </div>
     </div>
   </section>
@@ -75,15 +80,16 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Harshit Mohan</p>
+    <p>&copy; all rights reserved 2025 Harshit Mohan</p>
   </footer>
+
   <script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    toggleBtn.textContent = isDark ? '☀️' : '🌙';
-  });
-</script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      const isDark = document.body.classList.contains('dark-theme');
+      toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    });
+  </script>
 </body>
 </html>
