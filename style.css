@@ -1,4 +1,4 @@
-/* Base styling */
+/* Reset & base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,12 +14,34 @@ header {
   color: #fff;
   padding: 2rem;
   text-align: center;
+  position: relative;
 }
 
 .tagline {
   font-size: 1.2rem;
   margin-top: 0.5rem;
   color: #e0e7ff;
+}
+
+/* Theme Toggle Button (top-right, icon only) */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+body:not(.dark-theme) .theme-toggle {
+  color: #333;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
 }
 
 /* Navigation */
@@ -101,7 +123,7 @@ h2 {
   border-left: 6px solid #4f46e5;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
 }
 
@@ -121,23 +143,8 @@ footer {
   text-align: center;
   padding: 1rem;
 }
-/* Theme toggle button */
-.theme-toggle {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #e0e7ff;
-  border: none;
-  border-radius: 6px;
-  color: #333;
-}
 
-.theme-toggle:hover {
-  background-color: #c7d2fe;
-}
-
-/* Dark mode */
+/* Dark Theme Styles */
 body.dark-theme {
   background-color: #1a1a1a;
   color: #f4f4f4;
