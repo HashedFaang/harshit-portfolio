@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Harshit Mohan | Aspiring Data Scientist</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
-
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">Harshit</div>
+      <div class="logo"><i class="fas fa-database"></i></div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -21,7 +19,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">🌙</button></li>
+        <li><button id="theme-toggle"><i class="fas fa-moon"></i></button></li>
       </ul>
     </nav>
   </header>
@@ -40,37 +38,37 @@
   <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
-      <div class="skill"><i class="fa-solid fa-database"></i> SQL</div>
-      <div class="skill"><i class="fa-solid fa-file-excel"></i> Excel</div>
-      <div class="skill"><i class="fa-solid fa-table"></i> Pandas</div>
-      <div class="skill"><i class="fa-solid fa-bars-progress"></i> NumPy</div>
-      <div class="skill"><i class="fa-solid fa-brain"></i> Scikit-learn</div>
-      <div class="skill"><i class="fa-solid fa-chart-column"></i> Power BI</div>
-      <div class="skill"><i class="fa-solid fa-chart-pie"></i> Tableau</div>
-      <div class="skill"><i class="fa-solid fa-robot"></i> Machine Learning</div>
-      <div class="skill"><i class="fa-solid fa-broom"></i> Data Cleaning</div>
+      <div><i class="fab fa-python"></i> Python</div>
+      <div><i class="fas fa-database"></i> SQL</div>
+      <div><i class="fas fa-file-excel"></i> Excel</div>
+      <div><i class="fas fa-chart-line"></i> Pandas</div>
+      <div><i class="fas fa-cogs"></i> NumPy</div>
+      <div><i class="fas fa-brain"></i> Scikit-learn</div>
+      <div><i class="fas fa-chart-pie"></i> Power BI</div>
+      <div><i class="fas fa-chart-bar"></i> Tableau</div>
+      <div><i class="fas fa-robot"></i> Machine Learning</div>
+      <div><i class="fas fa-broom"></i> Data Cleaning</div>
     </div>
   </section>
 
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects-grid">
-      <div class="project-card">
+      <div>
         <h3>🌐 Portfolio Website</h3>
         <p>This site was built using HTML, CSS, and JS to showcase my skills.</p>
       </div>
-      <div class="project-card">
-        <h3>📊 Netflix Data Analysis</h3>
+      <div>
+        <h3>📦 Netflix Data Analysis</h3>
         <p>Explored Netflix data using Python, Pandas, and visualization libraries.</p>
       </div>
-      <div class="project-card">
-        <h3>👨‍💻 Coders of Delhi</h3>
+      <div>
+        <h3>👥 Coders of Delhi</h3>
         <p>Data project with JSON parsing and Python logic for building recommendation features.</p>
       </div>
-      <div class="project-card">
+      <div>
         <h3>🏢 ORICA IEPL Internship</h3>
-        <p>Worked as Data Analysis Intern on safety and performance metrics using Excel and visualization tools.</p>
+        <p>Worked as a Data Analysis Intern on automation and visualization tasks using Excel and Python.</p>
       </div>
     </div>
   </section>
@@ -91,13 +89,10 @@
     <p>&copy; 2025 Harshit Mohan. All rights reserved.</p>
   </footer>
 
-  <div id="scrollToTop" title="Go to top">⬆️</div>
+  <button id="scroll-top"><i class="fas fa-arrow-up"></i></button>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="https://kit.fontawesome.com/36c61746d7.js" crossorigin="anonymous"></script>
+  <script>AOS.init();</script>
 </body>
-
 </html>
