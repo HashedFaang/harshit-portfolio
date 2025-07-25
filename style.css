@@ -233,3 +233,37 @@ body.dark .contact-section a {
 .scroll-to-top:hover {
   background-color: #0097a7;
 }
+/* Dark Mode Styling */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark .navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark .nav-links a {
+  color: #f0f0f0;
+}
+
+body.dark .nav-links a:hover {
+  color: #00bfff;
+}
+
+body.dark .theme-toggle {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark .project,
+body.dark .skills-grid .skill {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Optional: for smoother button appearance */
+body.dark #scrollToTopBtn {
+  background-color: #333;
+  color: #fff;
+}
