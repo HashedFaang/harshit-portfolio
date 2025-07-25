@@ -4,22 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harshit Mohan | Aspiring Data Scientist</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/857/857681.png" type="image/png">
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo-icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Logo" />
-      </div>
+      <div class="logo-icon">🧠</div>
+      <div class="hamburger" id="hamburger">☰</div>
       <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -27,19 +21,18 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="HarshitResume.pdf" download>Resume</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">🌙</button></li>
+        <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
       </ul>
-      <div class="hamburger" id="hamburger">&#9776;</div>
     </nav>
   </header>
 
-  <section id="home" class="hero" data-aos="fade-in">
+  <section id="home" class="hero">
     <img src="assets/harshit.jpg" alt="Harshit Mohan" class="profile-pic" />
-    <h1>Hi, I'm <span>Harshit Mohan</span></h1>
+    <h1>Hi, I'm Harshit Mohan</h1>
     <p class="tagline">Aspiring Data Scientist | BIT Mesra</p>
   </section>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about" class="about-section">
     <h2>About Me</h2>
     <p>
       ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems.
@@ -48,55 +41,49 @@
     </p>
   </section>
 
-  <section id="skills" data-aos="fade-up">
+  <section id="skills" class="skills-section">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/> SQL</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/> Pandas</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/> NumPy</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"/> TensorFlow</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"/> Keras</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/> GitHub</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/> Git</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/> HTML</div>
-      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/> CSS</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /> Python</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /> SQL</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" /> Pandas</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" /> NumPy</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" /> TensorFlow</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" /> Keras</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /> Git</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /> GitHub</div>
     </div>
   </section>
 
-  <section id="projects" data-aos="fade-up">
+  <section id="projects" class="projects-section">
     <h2>Projects</h2>
     <div class="projects-grid">
-      <div class="project">🌐 <strong>Portfolio Website</strong>
-        <p>Built this site using HTML, CSS, JS to showcase my journey.</p>
+      <div class="project">
+        🌐 <strong>Portfolio Website</strong>
+        <p>This site was built using HTML, CSS, and JS to showcase my skills.</p>
       </div>
-      <div class="project">📊 <strong>Netflix Data Analysis</strong>
+      <div class="project">
+        📊 <strong>Netflix Data Analysis</strong>
         <p>Explored Netflix data using Python, Pandas, and visualization libraries.</p>
       </div>
-      <div class="project">👨‍💻 <strong>Coders of Delhi</strong>
+      <div class="project">
+        👨‍💻 <strong>Coders of Delhi</strong>
         <p>Community project sharing coding resources and mentoring.</p>
       </div>
-      <div class="project">🏢 <strong>ORICA IEPL Internship</strong>
-        <p>Worked as a Data Analysis Intern (July–Aug).</p>
+      <div class="project">
+        🏢 <strong>ORICA IEPL Internship</strong>
+        <p>Engineering Intern in Data Analysis (July–Aug).</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" data-aos="fade-up">
+  <section id="contact" class="contact-section">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:harshitm.iiit@gmail.com">harshitm.iiit@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">Profile</a></p>
-    <p>Phone: +91-8210178885</p>
+    <p>Phone: 8210178885</p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Harshit Mohan. All rights reserved.</p>
-  </footer>
-
   <button id="scrollToTopBtn" class="scroll-to-top">⬆️</button>
-
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
