@@ -1,36 +1,31 @@
-// Theme Toggle Logic
-const themeToggleBtn = document.getElementById("theme-toggle");
+// Theme toggle logic
+const toggle = document.getElementById("theme-toggle");
 const body = document.body;
+const scrollBtn = document.getElementById("scroll-top");
 
-// Apply saved theme on load
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
+// Load theme preference
+if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
-  themeToggleBtn.textContent = "☀️";
-} else {
-  body.classList.remove("dark");
-  themeToggleBtn.textContent = "🌙";
+  toggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
-// On toggle click
-themeToggleBtn.addEventListener("click", () => {
+// Toggle on click
+toggle.addEventListener("click", () => {
   body.classList.toggle("dark");
   const isDark = body.classList.contains("dark");
-  themeToggleBtn.textContent = isDark ? "☀️" : "🌙";
+  toggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
-// Scroll-to-top button logic
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
+// Scroll-to-top logic
 window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 200) {
-    scrollTopBtn.style.display = "block";
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add("show");
   } else {
-    scrollTopBtn.style.display = "none";
+    scrollBtn.classList.remove("show");
   }
 });
 
-function scrollToTop() {
+scrollBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
-}
+});
