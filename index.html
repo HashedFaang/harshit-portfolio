@@ -2,127 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harshit Mohan | Aspiring Data Scientist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harshit Mohan | Data Scientist</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #4f46e5;
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 18px;
-      display: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-  </style>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Harshit</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">🌙</button></li>
-      </ul>
-    </nav>
+
+  <header class="navbar">
+    <div class="logo">Harshit</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="theme-toggle">🌙</button></li>
+    </ul>
   </header>
 
-  <section id="home" class="hero" data-aos="zoom-in">
-    <img src="assets/harshit.jpg" alt="Harshit Mohan">
+  <section id="home" class="hero">
+    <img src="assets/harshit.jpg" alt="Harshit Mohan" />
     <h1>Hi, I'm <span>Harshit Mohan</span></h1>
     <p>Aspiring Data Scientist | BIT Mesra</p>
   </section>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about" class="section">
     <h2>About Me</h2>
     <p>ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems. Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions. Selected in top 500 of EricssonEdge Academia Program. Open to roles in data analysis, data science, and applied AI.</p>
   </section>
 
-  <section id="skills" data-aos="fade-up">
+  <section id="skills" class="section">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div>Python</div>
-      <div>SQL</div>
-      <div>Pandas</div>
-      <div>Scikit-learn</div>
-      <div>Excel</div>
-      <div>NumPy</div>
-      <div>Power BI</div>
-      <div>Tableau</div>
-      <div>Matplotlib</div>
-      <div>Seaborn</div>
-      <div>Data Wrangling</div>
-      <div>Data Visualization</div>
-      <div>Model Evaluation</div>
-      <div>EDA</div>
+      <div>🐍 Python</div>
+      <div>🧮 SQL</div>
+      <div>📊 Excel</div>
+      <div>📉 Pandas</div>
+      <div>📈 NumPy</div>
+      <div>📘 Scikit-learn</div>
+      <div>📊 Power BI</div>
+      <div>📊 Tableau</div>
     </div>
   </section>
 
-  <section id="projects" data-aos="fade-up">
+  <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="projects-grid">
-      <div data-aos="flip-left">
-        <h3>Portfolio Website</h3>
-        <p>This site was built using HTML, CSS, and JS to showcase my skills.</p>
+      <div>
+        <h3>🌐 Portfolio Website</h3>
+        <p>This live website showcases my work and journey as a data science enthusiast.</p>
       </div>
-      <div data-aos="flip-right">
-        <h3>TFET Research Review</h3>
-        <p>A scientific review presented on Tunnel Field-Effect Transistors for academic publication.</p>
+      <div>
+        <h3>📦 Netflix Data Analysis</h3>
+        <p>Explored datasets to analyze trends in Netflix releases using Python and Matplotlib.</p>
       </div>
-      <div data-aos="flip-left">
-        <h3>Coders of Delhi</h3>
-        <p>Data project with JSON parsing and Python logic for building recommendation features.</p>
+      <div>
+        <h3>👥 Coders of Delhi</h3>
+        <p>Data project with JSON parsing and logic building using Python for member features.</p>
+      </div>
+      <div>
+        <h3>📊 ORICA IEPL Internship</h3>
+        <p>Worked as Engineering Intern on data analysis & automation projects during July–Aug.</p>
       </div>
     </div>
   </section>
 
-  <section id="resume" data-aos="fade-up">
+  <section id="resume" class="section">
     <h2>Resume</h2>
-    <a href="assets/HarshitResume (1).pdf" download>Download Resume</a>
+    <a href="assets/HarshitResume (1).pdf" download class="resume-button">Download My Resume</a>
   </section>
 
-  <section id="contact" data-aos="fade-up">
+  <section id="contact" class="section">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:harshitm.iiit@gmail.com">harshitm.iiit@gmail.com</a></p>
     <p>Phone: +91-8210178885</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">harshit-mohan</a></p>
   </section>
 
+  <button id="scrollTopBtn">↑</button>
+
   <footer>
     <p>&copy; 2025 Harshit Mohan. All rights reserved.</p>
   </footer>
 
-  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
-
-  <script src="script.js"></script>
-  <script>
-    AOS.init();
-
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-    window.onscroll = function () {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
-      }
-    };
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
