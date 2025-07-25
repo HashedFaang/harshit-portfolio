@@ -2,12 +2,10 @@
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
-// Set default mode from localStorage
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
 }
 
-// Update button icon based on theme
 function updateThemeIcon() {
   toggleBtn.textContent = body.classList.contains("dark") ? "🌙" : "☀️";
 }
@@ -23,11 +21,7 @@ toggleBtn.addEventListener("click", () => {
 const scrollBtn = document.getElementById("scrollToTopBtn");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
+  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
 });
 
 scrollBtn.addEventListener("click", () => {
