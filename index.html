@@ -3,100 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harshit Mohan | Aspiring Data Scientist</title>
-  <link rel="stylesheet" href="assets/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <title>Harshit Mohan | Data Scientist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Harshit</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">🌙</button></li>
-      </ul>
-    </nav>
+  <header class="hero-section">
+    <div class="hero-content">
+      <img src="assets/harshit.jpg" alt="Harshit Mohan" class="hero-img" />
+      <h1>Hi, I'm <span class="highlight">Harshit Mohan</span></h1>
+      <p class="hero-tagline">Turning Data into Insights — Aspiring Data Scientist</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary">Hire Me</a>
+        <a href="assets/HarshitResume.pdf" download class="btn secondary">Download Resume</a>
+      </div>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">🌙</button>
   </header>
 
-  <section id="home" class="hero" data-aos="fade-in">
-    <img src="assets/harshit.jpg" alt="Harshit Mohan">
-    <h1>Hi, I'm <span>Harshit Mohan</span></h1>
-    <p>Aspiring Data Scientist | BIT Mesra</p>
-  </section>
-
-  <section id="about" data-aos="fade-up">
+  <section id="about">
     <h2>About Me</h2>
-    <p>ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems. Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions. Selected in top 500 of EricssonEdge Academia Program. Open to roles in data analysis, data science, and applied AI.</p>
+    <p class="about-text">
+      ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems. Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions. Selected in top 500 of EricssonEdge Academia Program.
+    </p>
   </section>
 
-  <section id="skills" data-aos="fade-up">
+  <section id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div>🐍 Python</div>
-      <div>🗄️ SQL</div>
-      <div>📊 Pandas</div>
-      <div>📘 Scikit-learn</div>
-      <div>📈 Excel</div>
-      <div>➕ NumPy</div>
-      <div>📊 Power BI</div>
-      <div>📉 Tableau</div>
-      <div>🧠 Machine Learning</div>
-      <div>📂 Data Cleaning</div>
-      <div>📋 Data Visualization</div>
-      <div>🧪 EDA</div>
+      <div class="skill"><i class="fab fa-python"></i> Python</div>
+      <div class="skill"><i class="fas fa-database"></i> SQL</div>
+      <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+      <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+      <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
+      <div class="skill"><i class="fas fa-chart-line"></i> Excel</div>
+      <div class="skill"><i class="fas fa-brain"></i> Scikit-learn</div>
     </div>
   </section>
 
-  <section id="projects" data-aos="fade-up">
+  <section id="projects">
     <h2>Projects</h2>
-    <div class="projects-grid">
-      <div>
-        <h3>🌐 Portfolio Website</h3>
-        <p>This site was built using HTML, CSS, and JS to showcase my skills. Hosted live on GitHub Pages.</p>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>📊 Student Result Dashboard</h3>
+        <p>Created a dashboard using Python & Excel to analyze academic performance trends.</p>
       </div>
-      <div>
-        <h3>📉 Netflix Data Analysis</h3>
-        <p>Exploratory analysis of Netflix titles using Python, pandas, and seaborn to discover global content patterns.</p>
+      <div class="project-card">
+        <h3>💸 Medical Cost Prediction</h3>
+        <p>Built regression model in Python using scikit-learn to predict insurance charges.</p>
       </div>
-      <div>
-        <h3>👨‍💻 Coders of Delhi</h3>
-        <p>Community project with JSON parsing and Python logic for building coder recommendation features.</p>
+      <div class="project-card">
+        <h3>🎬 Netflix Data Analysis</h3>
+        <p>Used Pandas and Matplotlib to analyze and visualize Netflix watch patterns.</p>
       </div>
-      <div>
-        <h3>📊 ORICA IEPL Internship</h3>
-        <p>Worked as an Engineering Intern in Data Analysis. Used Excel, SQL and Python for extracting actionable insights.</p>
+      <div class="project-card">
+        <h3>🧑‍💻 Coders of Delhi</h3>
+        <p>Contributed to a community-led project under Coders of Delhi. Built UI elements and collaborated in open source development.</p>
       </div>
     </div>
   </section>
 
-  <section id="resume" data-aos="fade-up">
-    <h2>Resume</h2>
-    <a href="assets/HarshitResume (1).pdf" download>⬇️ Download Resume</a>
-  </section>
-
-  <section id="contact" data-aos="fade-up">
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:harshitm.iiit@gmail.com">harshitm.iiit@gmail.com</a></p>
-    <p>Phone: +91-8210178885</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">harshit-mohan</a></p>
+    <p>Phone: 8210178885</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">Harshit Mohan</a></p>
   </section>
 
   <footer>
     <p>&copy; All rights reserved 2025 </p>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
-
-  <script src="script.js"></script>
   <script>
-    AOS.init();
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      toggleBtn.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+    });
   </script>
 </body>
 </html>
