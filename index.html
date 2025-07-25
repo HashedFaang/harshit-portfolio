@@ -2,38 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Harshit Mohan | Data Scientist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshit Mohan | Aspiring Data Scientist</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
-
-  <header class="navbar">
-    <div class="logo">Harshit</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button id="theme-toggle">🌙</button></li>
-    </ul>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Harshit</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">🌙</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="home" class="hero">
-    <img src="assets/harshit.jpg" alt="Harshit Mohan" />
+  <section id="home" class="hero" data-aos="fade-in">
+    <img src="assets/harshit.jpg" alt="Harshit Mohan">
     <h1>Hi, I'm <span>Harshit Mohan</span></h1>
     <p>Aspiring Data Scientist | BIT Mesra</p>
   </section>
 
-  <section id="about" class="section">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems. Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions. Selected in top 500 of EricssonEdge Academia Program. Open to roles in data analysis, data science, and applied AI.</p>
   </section>
 
-  <section id="skills" class="section">
+  <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div>🐍 Python</div>
@@ -44,48 +46,52 @@
       <div>📘 Scikit-learn</div>
       <div>📊 Power BI</div>
       <div>📊 Tableau</div>
+      <div>🧠 Machine Learning</div>
+      <div>📂 Data Cleaning</div>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects-grid">
       <div>
         <h3>🌐 Portfolio Website</h3>
-        <p>This live website showcases my work and journey as a data science enthusiast.</p>
+        <p>This site was built using HTML, CSS, and JS to showcase my skills.</p>
       </div>
       <div>
         <h3>📦 Netflix Data Analysis</h3>
-        <p>Explored datasets to analyze trends in Netflix releases using Python and Matplotlib.</p>
+        <p>Explored Netflix data using Python, Pandas, and visualization libraries.</p>
       </div>
       <div>
         <h3>👥 Coders of Delhi</h3>
-        <p>Data project with JSON parsing and logic building using Python for member features.</p>
+        <p>Data project with JSON parsing and Python logic for building recommendation features.</p>
       </div>
       <div>
-        <h3>📊 ORICA IEPL Internship</h3>
-        <p>Worked as Engineering Intern on data analysis & automation projects during July–Aug.</p>
+        <h3>🏢 ORICA IEPL Internship</h3>
+        <p>Worked as a Data Analysis Intern on automation and visualization tasks using Excel and Python.</p>
       </div>
     </div>
   </section>
 
-  <section id="resume" class="section">
+  <section id="resume" data-aos="fade-up">
     <h2>Resume</h2>
-    <a href="assets/HarshitResume (1).pdf" download class="resume-button">Download My Resume</a>
+    <a href="assets/HarshitResume.pdf" download>Download Resume</a>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:harshitm.iiit@gmail.com">harshitm.iiit@gmail.com</a></p>
     <p>Phone: +91-8210178885</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">harshit-mohan</a></p>
   </section>
 
-  <button id="scrollTopBtn">↑</button>
-
   <footer>
     <p>&copy; 2025 Harshit Mohan. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
