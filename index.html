@@ -4,26 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harshit Mohan | Aspiring Data Scientist</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #4f46e5;
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 18px;
-      display: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -41,7 +24,7 @@
     </nav>
   </header>
 
-  <section id="home" class="hero" data-aos="zoom-in">
+  <section id="home" class="hero" data-aos="fade-in">
     <img src="assets/harshit.jpg" alt="Harshit Mohan">
     <h1>Hi, I'm <span>Harshit Mohan</span></h1>
     <p>Aspiring Data Scientist | BIT Mesra</p>
@@ -55,44 +38,46 @@
   <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div>Python</div>
-      <div>SQL</div>
-      <div>Pandas</div>
-      <div>Scikit-learn</div>
-      <div>Excel</div>
-      <div>NumPy</div>
-      <div>Power BI</div>
-      <div>Tableau</div>
-      <div>Matplotlib</div>
-      <div>Seaborn</div>
-      <div>Data Wrangling</div>
-      <div>Data Visualization</div>
-      <div>Model Evaluation</div>
-      <div>EDA</div>
+      <div>🐍 Python</div>
+      <div>🗄️ SQL</div>
+      <div>📊 Pandas</div>
+      <div>📘 Scikit-learn</div>
+      <div>📈 Excel</div>
+      <div>➕ NumPy</div>
+      <div>📊 Power BI</div>
+      <div>📉 Tableau</div>
+      <div>🧠 Machine Learning</div>
+      <div>📂 Data Cleaning</div>
+      <div>📋 Data Visualization</div>
+      <div>🧪 EDA</div>
     </div>
   </section>
 
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
     <div class="projects-grid">
-      <div data-aos="flip-left">
-        <h3>Portfolio Website</h3>
-        <p>This site was built using HTML, CSS, and JS to showcase my skills.</p>
+      <div>
+        <h3>🌐 Portfolio Website</h3>
+        <p>This site was built using HTML, CSS, and JS to showcase my skills. Hosted live on GitHub Pages.</p>
       </div>
-      <div data-aos="flip-right">
-        <h3>TFET Research Review</h3>
-        <p>A scientific review presented on Tunnel Field-Effect Transistors for academic publication.</p>
+      <div>
+        <h3>📉 Netflix Data Analysis</h3>
+        <p>Exploratory analysis of Netflix titles using Python, pandas, and seaborn to discover global content patterns.</p>
       </div>
-      <div data-aos="flip-left">
-        <h3>Coders of Delhi</h3>
-        <p>Data project with JSON parsing and Python logic for building recommendation features.</p>
+      <div>
+        <h3>👨‍💻 Coders of Delhi</h3>
+        <p>Community project with JSON parsing and Python logic for building coder recommendation features.</p>
+      </div>
+      <div>
+        <h3>📊 ORICA IEPL Internship</h3>
+        <p>Worked as an Engineering Intern in Data Analysis. Used Excel, SQL and Python for extracting actionable insights.</p>
       </div>
     </div>
   </section>
 
   <section id="resume" data-aos="fade-up">
     <h2>Resume</h2>
-    <a href="assets/HarshitResume (1).pdf" download>Download Resume</a>
+    <a href="assets/HarshitResume (1).pdf" download>⬇️ Download Resume</a>
   </section>
 
   <section id="contact" data-aos="fade-up">
@@ -103,26 +88,15 @@
   </section>
 
   <footer>
-    <p>&copy; All rights reserved 2025.</p>
+    <p>&copy; 2025 Harshit Mohan. All rights reserved.</p>
   </footer>
 
-  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+  <!-- Scroll to Top Button -->
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
 
   <script src="script.js"></script>
   <script>
     AOS.init();
-
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-    window.onscroll = function () {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
-      }
-    };
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
   </script>
 </body>
 </html>
