@@ -233,34 +233,6 @@ body.dark .contact-section a {
 .scroll-to-top:hover {
   background-color: #0097a7;
 }
-/* Dark Mode Styling */
-body.dark {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-body.dark .navbar {
-  background-color: #1e1e1e;
-}
-
-body.dark .nav-links a {
-  color: #f0f0f0;
-}
-
-body.dark .nav-links a:hover {
-  color: #00bfff;
-}
-
-body.dark .theme-toggle {
-  background-color: #333;
-  color: #f0f0f0;
-}
-
-body.dark .project,
-body.dark .skills-grid .skill {
-  background-color: #1a1a1a;
-  color: #f0f0f0;
-}
 
 /* Optional: for smoother button appearance */
 body.dark #scrollToTopBtn {
@@ -306,4 +278,51 @@ body.dark .nav-links a[href$="pdf"] {
 body.dark .nav-links a[href$="pdf"]:hover {
   background-color: #00ffff;
   color: #121212;
+}
+/* Navbar Dark Theme Styling */
+body.dark .navbar {
+  background-color: #121212;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #2c2c2c;
+}
+
+/* Navbar Links in Dark Mode */
+body.dark .nav-links a {
+  color: #eeeeee;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+body.dark .nav-links a:hover {
+  color: #00f7ff;
+  text-shadow: 0 0 4px #00f7ff;
+}
+
+/* Resume Button Special Style */
+body.dark .nav-links a[href$=".pdf"] {
+  background-color: transparent;
+  border: 1px solid #00f7ff;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: #00f7ff;
+  font-weight: 600;
+}
+
+body.dark .nav-links a[href$=".pdf"]:hover {
+  background-color: #00f7ff;
+  color: #121212;
+}
+
+/* Theme toggle button in dark mode */
+body.dark .theme-toggle {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* Optional: Scroll-to-top button visibility fix */
+body.dark .scroll-to-top {
+  background-color: #1f1f1f;
+  color: #00f7ff;
+  border: 1px solid #00f7ff;
 }
