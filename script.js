@@ -2,22 +2,34 @@
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
-});
+// Remove default label (🌙/☀️) and use only icon visuals
+function updateThemeIcon() {
+  toggleBtn.innerHTML = body.classList.contains("dark") ? "<i class='fas fa-sun'></i>" : "<i class='fas fa-moon'></i>";
+}
+
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    updateThemeIcon();
+  });
+  updateThemeIcon();
+}
 
 // Scroll to Top Button
 const scrollBtn = document.getElementById("scrollToTopBtn");
 
-window.onscroll = () => {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-};
+if (scrollBtn) {
+  window.onscroll = () => {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.style.opacity = "1";
+      scrollBtn.style.pointerEvents = "auto";
+    } else {
+      scrollBtn.style.opacity = "0";
+      scrollBtn.style.pointerEvents = "none";
+    }
+  };
 
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
