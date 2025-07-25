@@ -3,95 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harshit Mohan | Aspiring Data Scientist</title>
+  <title>Harshit Mohan | Data Scientist Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Harshit</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">🌙</button></li>
-      </ul>
-    </nav>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">HM</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="theme-toggle">🌞</button></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="home" class="hero" data-aos="fade-in">
-    <img src="assets/harshit.jpg" alt="Harshit Mohan">
-    <h1>Hi, I'm <span>Harshit Mohan</span></h1>
-    <p>Aspiring Data Scientist | BIT Mesra</p>
-  </section>
-
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems. Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions. Selected in top 500 of EricssonEdge Academia Program. Open to roles in data analysis, data science, and applied AI.</p>
-  </section>
-
-  <section id="skills" data-aos="fade-up">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div>🐍 Python</div>
-      <div>🧮 SQL</div>
-      <div>📊 Excel</div>
-      <div>📉 Pandas</div>
-      <div>📈 NumPy</div>
-      <div>📘 Scikit-learn</div>
-      <div>📊 Power BI</div>
-      <div>📊 Tableau</div>
-      <div>🧠 Machine Learning</div>
-      <div>📂 Data Cleaning</div>
-    </div>
-  </section>
-
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
-    <div class="projects-grid">
+  <section id="home" class="hero" data-aos="fade-up">
+    <div class="container hero-content">
+      <img src="assets/harshit.jpg" alt="Harshit Mohan" class="hero-img">
       <div>
-        <h3>🌐 Portfolio Website</h3>
-        <p>This site was built using HTML, CSS, and JS to showcase my skills.</p>
-      </div>
-      <div>
-        <h3>📦 Netflix Data Analysis</h3>
-        <p>Explored Netflix data using Python, Pandas, and visualization libraries.</p>
-      </div>
-      <div>
-        <h3>👥 Coders of Delhi</h3>
-        <p>Data project with JSON parsing and Python logic for building recommendation features.</p>
-      </div>
-      <div>
-        <h3>🏢 ORICA IEPL Internship</h3>
-        <p>Worked as a Data Analysis Intern on automation and visualization tasks using Excel and Python.</p>
+        <h2>Hi, I'm <span>Harshit Mohan</span></h2>
+        <p>Aspiring Data Scientist | BIT Mesra</p>
       </div>
     </div>
   </section>
 
-  <section id="resume" data-aos="fade-up">
-    <h2>Resume</h2>
-    <a href="assets/HarshitResume.pdf" download>Download Resume</a>
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems. Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions. Selected in top 500 of EricssonEdge Academia Program. Open to roles in data analysis, data science, and applied AI.</p>
+    </div>
   </section>
 
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:harshitm.iiit@gmail.com">harshitm.iiit@gmail.com</a></p>
-    <p>Phone: +91-8210178885</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">harshit-mohan</a></p>
+  <section id="skills" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div><i class="fab fa-python"></i> Python</div>
+        <div><i class="fas fa-database"></i> SQL</div>
+        <div><i class="fas fa-table"></i> Excel</div>
+        <div><i class="fas fa-chart-line"></i> Pandas</div>
+        <div><i class="fas fa-robot"></i> Scikit-learn</div>
+        <div><i class="fas fa-layer-group"></i> NumPy</div>
+        <div><i class="fas fa-chart-pie"></i> Power BI</div>
+        <div><i class="fas fa-chart-bar"></i> Tableau</div>
+        <div><i class="fas fa-brain"></i> Machine Learning</div>
+        <div><i class="fas fa-cloud"></i> Google Colab</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div>
+          <h3>🌐 Portfolio Website</h3>
+          <p>This portfolio site built with HTML, CSS, and JS showcases my journey, skills, and projects.</p>
+        </div>
+        <div>
+          <h3>📊 Netflix Data Analysis</h3>
+          <p>Data cleaning, EDA and dashboard creation using Python and pandas on Netflix viewing trends.</p>
+        </div>
+        <div>
+          <h3>👥 Coders of Delhi</h3>
+          <p>Collaborative data science project with JSON parsing and recommendation engine design.</p>
+        </div>
+        <div>
+          <h3>📈 IEPL Data Internship</h3>
+          <p>Interned as Data Analyst at Orica IEPL. Worked on Excel dashboards and business insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Resume</h2>
+      <a href="assets/HarshitResume.pdf" download class="btn">📄 Download Resume</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:harshitm.iiit@gmail.com">harshitm.iiit@gmail.com</a></p>
+      <p>Phone: +91-8210178885</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">harshit-mohan</a></p>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Harshit Mohan. All rights reserved.</p>
+    <p>&copy; All rights reserved 2025.</p>
   </footer>
 
+  <button id="scroll-top">⬆️</button>
+
   <script src="script.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
