@@ -1,96 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harshit Mohan | Aspiring Data Scientist</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://kit.fontawesome.com/2c9b7679b1.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
   <header>
     <nav class="navbar">
+      <div class="logo">Harshit</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="HarshitResume.pdf" download>Resume</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle">🌙</button></li>
+        <li><button class="theme-toggle" id="theme-toggle"></button></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home" class="hero" data-aos="fade-in">
-    <img src="assets/harshit.jpg" alt="Harshit Mohan">
-    <h1>Hi, I'm <span>Harshit Mohan</span></h1>
-    <p>Aspiring Data Scientist | BIT Mesra</p>
+  <section id="home" class="hero">
+    <img src="profile.jpg" alt="Harshit Mohan" class="profile-pic" />
+    <h1>Hi, I'm Harshit Mohan</h1>
+    <p class="tagline">Aspiring Data Scientist | BIT Mesra</p>
   </section>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about" class="about-section">
     <h2>About Me</h2>
-    <p>ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems. Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions. Selected in top 500 of EricssonEdge Academia Program. Open to roles in data analysis, data science, and applied AI.</p>
+    <p>
+      ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems.
+      Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions.
+      Selected in top 500 of EricssonEdge Academia Program. Open to roles in data analysis, data science, and applied AI.
+    </p>
   </section>
 
-  <section id="skills" data-aos="fade-up">
+  <section id="skills" class="skills-section">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div><img src="assets/icons/python.svg" alt="Python"> Python</div>
-      <div><img src="assets/icons/sql.svg" alt="SQL"> SQL</div>
-      <div><img src="assets/icons/excel.svg" alt="Excel"> Excel</div>
-      <div><img src="assets/icons/pandas.svg" alt="Pandas"> Pandas</div>
-      <div><img src="assets/icons/numpy.svg" alt="NumPy"> NumPy</div>
-      <div><img src="assets/icons/scikit.svg" alt="Scikit-learn"> Scikit-learn</div>
-      <div><img src="assets/icons/powerbi.svg" alt="Power BI"> Power BI</div>
-      <div><img src="assets/icons/tableau.svg" alt="Tableau"> Tableau</div>
-      <div><img src="assets/icons/ml.svg" alt="Machine Learning"> Machine Learning</div>
-      <div><img src="assets/icons/cleaning.svg" alt="Data Cleaning"> Data Cleaning</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /> Python</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /> SQL</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" /> Pandas</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" /> NumPy</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" /> TensorFlow</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /> Git</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /> GitHub</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" /> AWS</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" /> Keras</div>
     </div>
   </section>
 
-  <section id="projects" data-aos="fade-up">
+  <section id="projects" class="projects-section">
     <h2>Projects</h2>
     <div class="projects-grid">
-      <div>
-        <h3>🌐 Portfolio Website</h3>
+      <div class="project">
+        🌐 <strong>Portfolio Website</strong>
         <p>This site was built using HTML, CSS, and JS to showcase my skills.</p>
       </div>
-      <div>
-        <h3>📊 Netflix Data Analysis</h3>
+      <div class="project">
+        📊 <strong>Netflix Data Analysis</strong>
         <p>Explored Netflix data using Python, Pandas, and visualization libraries.</p>
       </div>
-      <div>
-        <h3>👨‍💻 Coders of Delhi</h3>
-        <p>Data project with JSON parsing and Python logic for building recommendation features.</p>
+      <div class="project">
+        👨‍💻 <strong>Coders of Delhi</strong>
+        <p>Community project sharing coding resources and mentoring.</p>
       </div>
-      <div>
-        <h3>🏢 ORICA IEPL Internship</h3>
-        <p>Engineering Intern under Data Analytics, July–August 2025.</p>
+      <div class="project">
+        🏢 <strong>ORICA IEPL Internship</strong>
+        <p>Engineering Intern in Data Analysis (July–Aug).</p>
       </div>
     </div>
   </section>
 
-  <section id="resume" data-aos="fade-up">
-    <h2>Resume</h2>
-    <a href="assets/HarshitResume.pdf" download class="resume-btn">Download Resume</a>
-  </section>
-
-  <section id="contact" data-aos="fade-up">
+  <section id="contact" class="contact-section">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:harshitm.iiit@gmail.com">harshitm.iiit@gmail.com</a></p>
-    <p>Phone: +91-8210178885</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">harshit-mohan</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">Profile</a></p>
+    <p>Phone: 8210178885</p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Harshit Mohan. All rights reserved.</p>
-  </footer>
-
-  <button id="scrollToTopBtn" title="Go to top">⬆️</button>
-  <script src="script.js"></script>
-  <script>AOS.init();</script>
+  <button id="scrollToTopBtn" class="scroll-to-top">⬆️</button>
 </body>
+
 </html>
