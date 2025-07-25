@@ -1,33 +1,35 @@
-// Theme Toggle Logic
-const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
-const currentTheme = localStorage.getItem("theme");
+// Dark/Light Theme Toggle
+const toggleButton = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
 
-if (currentTheme === "dark") {
-  body.classList.add("dark-mode");
-  toggleBtn.textContent = "🌞";
+if (currentTheme === 'dark') {
+  document.body.classList.add('dark');
+  toggleButton.textContent = '🌞';
 } else {
-  toggleBtn.textContent = "🌙";
+  toggleButton.textContent = '🌙';
 }
 
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  if (body.classList.contains("dark-mode")) {
-    toggleBtn.textContent = "🌞";
-    localStorage.setItem("theme", "dark");
-  } else {
-    toggleBtn.textContent = "🌙";
-    localStorage.setItem("theme", "light");
-  }
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+  toggleButton.textContent = theme === 'dark' ? '🌞' : '🌙';
+  localStorage.setItem('theme', theme);
 });
 
 // Scroll to Top Button
-const scrollBtn = document.getElementById("scrollToTopBtn");
+const scrollBtn = document.getElementById('scrollToTopBtn');
 
-window.addEventListener("scroll", () => {
-  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
 });
 
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
