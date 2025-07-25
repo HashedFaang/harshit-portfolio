@@ -1,181 +1,143 @@
-/* style.css */
-
 :root {
-  --color-light-bg: #f9f9f9;
-  --color-dark-bg: #1f1f1f;
-  --color-primary: #6c63ff;
-  --color-secondary: #ff6584;
-  --color-text-dark: #333;
-  --color-text-light: #fff;
-  --color-accent: #3bc9db;
+  --primary: #4f46e5;
+  --accent: #9333ea;
+  --bg-light: #f9f9f9;
+  --bg-dark: #1f1f1f;
+  --text-light: #ffffff;
+  --text-dark: #1e1e1e;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.light {
-  background-color: var(--color-light-bg);
-  color: var(--color-text-dark);
+  transition: background 0.3s, color 0.3s;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
 }
 
 body.dark {
-  background-color: var(--color-dark-bg);
-  color: var(--color-text-light);
-}
-
-header {
-  background-color: var(--color-primary);
-  padding: 0.5rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
 }
 
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
-  padding-left: 0;
-  margin: 0;
+  gap: 1rem;
 }
 
 .nav-links li a {
+  color: #fff;
   text-decoration: none;
-  color: white;
   font-weight: 600;
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-  color: var(--color-secondary);
 }
 
 .theme-toggle {
-  background: none;
+  background: transparent;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  color: #fff;
   cursor: pointer;
-  color: white;
 }
 
 .hero {
   text-align: center;
-  padding: 4rem 1rem 2rem;
+  padding: 4rem 1rem;
 }
 
 .profile-pic {
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 4px solid var(--color-primary);
-  object-fit: cover;
+  border: 4px solid var(--accent);
   margin-bottom: 1rem;
 }
 
-.tagline {
-  color: var(--color-primary);
-  font-weight: 600;
+h1, h2 {
+  color: var(--primary);
 }
 
-section {
-  padding: 3rem 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-h2 {
+.skills-section, .projects-section, .contact-section, .about-section {
+  padding: 3rem 2rem;
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
 }
 
 .skills-grid, .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.2rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .skill, .project {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 10px;
   padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.skill:hover, .project:hover {
-  transform: translateY(-5px);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
 }
 
 .skill img {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 0.5rem;
+  width: 24px;
+  height: 24px;
 }
 
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--color-secondary);
-  color: white;
+  background-color: var(--accent);
+  color: #fff;
   border: none;
-  padding: 0.6rem 0.8rem;
   border-radius: 50%;
-  cursor: pointer;
+  padding: 0.6rem 0.9rem;
   font-size: 1.2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  cursor: pointer;
   display: none;
 }
 
-.scroll-to-top.show {
-  display: block;
+/* Responsive Nav Toggle for mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .nav-links {
+    display: none;
     flex-direction: column;
-    background-color: var(--color-primary);
-    width: 100%;
+    background: var(--primary);
     position: absolute;
     top: 60px;
-    left: 0;
-    display: none;
+    right: 0;
+    width: 100%;
+    padding: 1rem 2rem;
   }
 
-  .nav-links.show {
+  .nav-links.active {
     display: flex;
   }
 
-  .hamburger {
+  .menu-toggle {
     display: block;
-    cursor: pointer;
-    font-size: 1.6rem;
-    color: white;
   }
-}
-
-/* Dark Mode Accent */
-body.dark .navbar {
-  background-color: #292b36;
-}
-
-body.dark .skill, body.dark .project {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-body.light .skill, body.light .project {
-  background: #f0f0f0;
 }
