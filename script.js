@@ -1,35 +1,33 @@
-// Dark/Light Theme Toggle
-const toggleButton = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
+// Theme toggle logic
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
 
-if (currentTheme === 'dark') {
-  document.body.classList.add('dark');
-  toggleButton.textContent = '🌞';
+// Load saved theme on page load
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  body.classList.add("dark");
+  toggleBtn.textContent = "🌞";
 } else {
-  toggleButton.textContent = '🌙';
+  toggleBtn.textContent = "🌙";
 }
 
-toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
-  toggleButton.textContent = theme === 'dark' ? '🌞' : '🌙';
-  localStorage.setItem('theme', theme);
+// Toggle theme on button click
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  const isDark = body.classList.contains("dark");
+  toggleBtn.textContent = isDark ? "🌞" : "🌙";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
-// Scroll to Top Button
-const scrollBtn = document.getElementById('scrollToTopBtn');
-
-window.addEventListener('scroll', () => {
+// Scroll-to-top button logic
+const scrollBtn = document.getElementById("scrollToTopBtn");
+window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
-    scrollBtn.style.display = 'block';
+    scrollBtn.style.display = "block";
   } else {
-    scrollBtn.style.display = 'none';
+    scrollBtn.style.display = "none";
   }
 });
-
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
