@@ -1,19 +1,23 @@
+// Theme Toggle
 const toggleBtn = document.getElementById("theme-toggle");
-const scrollBtn = document.getElementById("scrollToTopBtn");
+const body = document.body;
 
 toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  body.classList.toggle("dark");
+  toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
+// Scroll to Top Button
+const scrollBtn = document.getElementById("scrollToTopBtn");
+
+window.onscroll = () => {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     scrollBtn.style.display = "block";
   } else {
     scrollBtn.style.display = "none";
   }
-});
+};
 
 scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
