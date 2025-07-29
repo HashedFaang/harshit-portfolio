@@ -1,4 +1,4 @@
-// Theme toggle with persistent dark/light mode
+// Theme toggle with persistence
 const toggleBtn = document.getElementById('theme-toggle');
 if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark');
@@ -10,6 +10,13 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('theme', dark ? 'dark' : 'light');
 });
 
+// Mobile nav button toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 // Scroll-to-top button logic
 const scrollBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
@@ -19,7 +26,7 @@ scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Intersection Observer for reveal animation
+// Animate cards on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -33,14 +40,3 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.skill-card, .project-card').forEach(el => {
   observer.observe(el);
 });
-
-// Intersection Observer for dynamic header style on scroll
-const header = document.querySelector('.navbar');
-const intercept = document.createElement('div');
-intercept.style.position = 'absolute';
-intercept.style.top = '200px';
-document.body.prepend(intercept);
-
-new IntersectionObserver(([entry]) => {
-  header.classList.toggle('scrolled', !entry.isIntersecting);
-}, { rootMargin: '0px', threshold: 0 }).observe(intercept);
