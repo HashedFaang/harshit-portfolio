@@ -1,42 +1,37 @@
-// Theme toggle with persistence
-const toggleBtn = document.getElementById('theme-toggle');
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
-  toggleBtn.textContent = '🌙';
+// Theme Toggle Button
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Set default mode from localStorage
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
 }
-toggleBtn.addEventListener('click', () => {
-  const dark = document.body.classList.toggle('dark');
-  toggleBtn.textContent = dark ? '🌙' : '☀️';
-  localStorage.setItem('theme', dark ? 'dark' : 'light');
+updateThemeIcon();
+
+// Toggle theme on click
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  updateThemeIcon();
 });
 
-// Mobile nav button toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+function updateThemeIcon() {
+  toggleBtn.textContent = body.classList.contains("dark") ? "🌙" : "☀️";
+}
+
+// Scroll to top button
+const scrollBtn = document.getElementById("scrollToTopBtn");
+window.addEventListener("scroll", () => {
+  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Scroll-to-top button logic
-const scrollBtn = document.getElementById('scrollToTopBtn');
-window.addEventListener('scroll', () => {
-  scrollBtn.classList.toggle('visible', window.scrollY > 400);
-});
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+// Mobile Nav Toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-// Animate cards on scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
-
-document.querySelectorAll('.skill-card, .project-card').forEach(el => {
-  observer.observe(el);
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
