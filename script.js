@@ -1,37 +1,38 @@
-// Theme Toggle Button
-const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
-
-// Set default mode from localStorage
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark");
+// Theme Toggle & localStorage support
+const toggleBtn = document.getElementById('theme-toggle');
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  toggleBtn.textContent = '🌙';
 }
-updateThemeIcon();
-
-// Toggle theme on click
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
-  updateThemeIcon();
+toggleBtn.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark');
+  toggleBtn.textContent = isDark ? '🌙' : '☀️';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-function updateThemeIcon() {
-  toggleBtn.textContent = body.classList.contains("dark") ? "🌙" : "☀️";
-}
-
-// Scroll to top button
-const scrollBtn = document.getElementById("scrollToTopBtn");
-window.addEventListener("scroll", () => {
-  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+// Scroll-to-top button
+const scrollBtn = document.getElementById('scrollToTopBtn');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    scrollBtn.classList.add('visible');
+  } else {
+    scrollBtn.classList.remove('visible');
+  }
 });
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Mobile Nav Toggle
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+// Intersection Observer for card reveal animation
+const cards = document.querySelectorAll('.skill-card, .project-card');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+cards.forEach(c => observer.observe(c));
