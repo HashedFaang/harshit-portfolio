@@ -1,30 +1,27 @@
-// Theme Toggle & localStorage support
+// Theme toggle with localStorage persistence
 const toggleBtn = document.getElementById('theme-toggle');
 if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark');
   toggleBtn.textContent = '🌙';
 }
 toggleBtn.addEventListener('click', () => {
-  const isDark = document.body.classList.toggle('dark');
-  toggleBtn.textContent = isDark ? '🌙' : '☀️';
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  const dark = document.body.classList.toggle('dark');
+  toggleBtn.textContent = dark ? '🌙' : '☀️';
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
 });
 
 // Scroll-to-top button
 const scrollBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 400) {
-    scrollBtn.classList.add('visible');
-  } else {
-    scrollBtn.classList.remove('visible');
-  }
+  if (window.scrollY > 400) scrollBtn.classList.add('visible');
+  else scrollBtn.classList.remove('visible');
 });
 scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Intersection Observer for card reveal animation
-const cards = document.querySelectorAll('.skill-card, .project-card');
+// Animate cards into view
+const animateCards = document.querySelectorAll('.skill-card, .project-card');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -35,4 +32,4 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 
-cards.forEach(c => observer.observe(c));
+animateCards.forEach(card => observer.observe(card));
