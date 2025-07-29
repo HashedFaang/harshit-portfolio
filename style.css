@@ -6,9 +6,12 @@
   --card-dark: #1e1e1e;
 }
 
+/* Global reset & text wrap fix */
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
-  white-space: normal; /* avoid nowrap causing overlap */  [oai_citation:0‡Reddit](https://www.reddit.com/r/css/comments/p3g75u/why_are_my_components_overlapping_when_using_grid/?utm_source=chatgpt.com) [oai_citation:1‡mastery.games](https://mastery.games/post/overlapping-grid-items/?utm_source=chatgpt.com)
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  white-space: normal;
 }
 
 body {
@@ -22,36 +25,70 @@ body.dark {
   color: #eee;
 }
 
+/* Navbar */
 .navbar {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   background-color: var(--card-light);
-  position: sticky; top: 0; z-index: 999;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 body.dark .navbar {
   background-color: var(--card-dark);
 }
 
+.logo-image {
+  width: 45px;
+}
+
 .nav-links {
-  list-style: none; display: flex; gap: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
 }
 .nav-links a {
-  font-weight: 600; color: inherit; text-decoration: none;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--primary); }
-
-.menu-toggle { display: none; }
-@media (max-width: 768px) {
-  .menu-toggle { display: block; }
-  .nav-links { display: none; flex-direction: column; width: 100%; background: inherit; padding:1rem 0; }
-  .nav-links.active { display: flex; }
+.nav-links a:hover {
+  color: var(--primary);
 }
 
-/* Hero Section */
+/* Toggle for mobile nav */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: inherit;
+    padding: 1rem 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Hero section */
 .hero {
-  display: flex; align-items: center; flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
   padding: 3rem 2rem;
   background: linear-gradient(to bottom, #e0f2ff, #f0f9ff);
 }
@@ -59,105 +96,177 @@ body.dark .hero {
   background: linear-gradient(to bottom, #1e1e1e, #121212);
 }
 .hero-img {
-  width: 100%; max-width: 350px; margin: 0 auto;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
 }
 .hero-img img {
-  width: 100%; height: auto; object-fit: cover;
-  border-radius: 50%; border: 4px solid var(--primary);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
 }
 @media (max-width: 768px) {
-  .hero { flex-direction: column; text-align: center; }
-  .hero-img { margin-top: 1.5rem; }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    margin-top: 1.5rem;
+  }
 }
 
-/* Section titles */
-.section { padding: 3rem 1rem; }
+/* Sections & Titles */
+.section {
+  padding: 3rem 1rem;
+}
 .section-title {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
-  color: var(--primary); margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
   text-align: center;
 }
 
 /* Info cards */
 .info-cards {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 1.5rem; margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 .info-cards div {
-  background: var(--card-light); padding: 1rem 1.5rem; border-radius: 8px;
+  background: var(--card-light);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
 }
-body.dark .info-cards div { background: var(--card-dark); }
+body.dark .info-cards div {
+  background: var(--card-dark);
+}
 
 /* Timeline */
 .timeline-container {
-  position: relative; max-width: 800px; margin: auto;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
 }
 .timeline-container::before {
-  content: ''; position: absolute; width: 4px; background: var(--primary);
-  top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: var(--primary);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .timeline-item {
-  position: relative; width: 50%; padding: 1rem;
+  position: relative;
+  width: 50%;
+  padding: 1rem;
 }
-.timeline-item:nth-child(odd) { left: 0; }
-.timeline-item:nth-child(even) { left: 50%; }
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
 .timeline-item .dot {
-  position: absolute; top: 1rem; left: 50%; width: 16px; height: 16px;
-  background: var(--primary); border-radius: 50%; transform: translateX(-50%);
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
 }
 .timeline-content {
-  background: var(--card-light); padding: 1rem; border-radius:8px;
+  background: var(--card-light);
+  padding: 1rem;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-body.dark .timeline-content { background: var(--card-dark); }
+body.dark .timeline-content {
+  background: var(--card-dark);
+}
 @media (max-width: 768px) {
-  .timeline-container { display: flex; flex-direction: column; align-items: center; }
-  .timeline-item { width: 90%; left: 0 !important; margin-bottom: 1rem; }
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline-item {
+    width: 90%;
+    left: 0 !important;
+    margin-bottom: 1rem;
+  }
 }
 
-/* Cards grid */
-.skills-grid, .projects-grid {
+/* Skills & Projects Grid */
+.skills-grid,
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
-.skill-card, .project-card {
-  background: var(--card-light); padding: 1.2rem; border-radius: 8px;
+.skill-card,
+.project-card {
+  background: var(--card-light);
+  padding: 1.2rem;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  display: flex; flex-direction: column; align-items: center;
-  min-height: 200px; overflow: hidden;
-  opacity: 0; transform: translateY(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-body.dark .skill-card, body.dark .project-card {
-  background: var(--card-dark); box-shadow: 0 2px 8px rgba(255,255,255,0.08);
+body.dark .skill-card,
+body.dark .project-card {
+  background: var(--card-dark);
+  box-shadow: 0 2px 8px rgba(255,255,255,0.08);
 }
 .skill-card img {
-  width: 48px; height: auto; margin-bottom: 0.6rem;
+  width: 48px;
+  height: auto;
+  margin-bottom: 0.6rem;
 }
-.skill-card span { font-weight: 500; color: var(--primary); }
+.skill-card span {
+  font-weight: 500;
+  color: var(--primary);
+}
 .project-card .icon {
-  font-size: 2.2rem; margin-bottom: 0.6rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
 }
-.project-card h3, .project-card p {
-  text-align: center; margin: 0.3rem 0;
+.project-card h3,
+.project-card p {
+  text-align: center;
+  margin: 0.3rem 0;
 }
 
-/* Scroll-to-top */
+/* Scroll-to-top button */
 .scroll-to-top {
-  position: fixed; bottom:2rem; right:2rem;
-  background-color: var(--primary); color: white; border: none;
-  border-radius: 50%; padding:0.7rem; font-size:1.3rem;
-  visibility: hidden; opacity: 0; transition: opacity 0.3s;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.7rem;
+  font-size: 1.3rem;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 .scroll-to-top.visible {
-  visibility: visible; opacity:1;
-}
-.navbar.scrolled {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background-color: var(--card-light);
-}
-body.dark .navbar.scrolled {
-  background-color: var(--card-dark);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  visibility: visible;
+  opacity: 1;
 }
