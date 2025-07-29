@@ -2,111 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Harshit Mohan | Data Scientist</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="icon" href="./assets/logo.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshit Mohan | Aspiring Data Scientist</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="navbar">
-    <img src="./assets/logo.png" alt="Logo" class="logo-image" />
-    <button class="menu-toggle">☰</button>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#journey">Journey</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="./assets/HarshitResume.pdf" download class="resume-btn">📄 Resume</a></li>
-    </ul>
-    <button id="theme-toggle" class="theme-toggle">☀️</button>
+  <header>
+    <nav class="navbar">
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+       <li> <a href="assets/HarshitResume.pdf" target="_blank" download>Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="theme-toggle" id="theme-toggle"></button></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-content">
-      <div>
-        <h2>Hi there! I'm</h2>
-        <h1>Harshit Mohan</h1>
-        <p class="subtitle">Aspiring Data Scientist – ECE @ BIT Mesra</p>
-        <a href="#contact" class="cta-btn">Get in Touch →</a>
-      </div>
-      <div class="hero-img">
-        <img src="./assets/harshit.jpg" alt="Harshit Mohan">
-      </div>
-    </div>
+    <img src="assets/harshit.jpg" alt="Harshit Mohan" class="profile-pic" />
+    <h1>Hi, I'm Harshit Mohan</h1>
+    <p class="tagline">Aspiring Data Scientist | BIT Mesra</p>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section about">
-    <h2 class="section-title">About Me</h2>
-    <p class="about-text">
-      ECE undergrad at BIT Mesra... Selected in top 500 of EricssonEdge Academia Program...
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>
+      ECE undergrad at BIT Mesra driven by curiosity for data and intelligent systems.
+      Skilled in Python, SQL, Excel, Pandas, and Scikit-learn. I enjoy exploring patterns, building models, and turning data into decisions.
+      Selected in top 500 of EricssonEdge Academia Program. Open to roles in data analysis, data science, and applied AI.
     </p>
-    <div class="info-cards">
-      <div><strong>1+</strong><span>Years Experience</span></div>
-      <div><strong>5+</strong><span>Projects Done</span></div>
-      <div><strong>3</strong><span>Tools Mastered</span></div>
-    </div>
   </section>
 
-  <!-- Journey -->
-  <section id="journey" class="section journey">
-    <h2 class="section-title">My Journey</h2>
-    <div class="timeline-container">
-      <div class="timeline-item">
-        <span class="dot"></span>
-        <div class="timeline-content">
-          <h3>2008 – 2020</h3><h4>Matriculation</h4><p>Chinmaya Vidyalaya</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <span class="dot"></span>
-        <div class="timeline-content">
-          <h3>2020 – 2022</h3><h4>Intermediate</h4><p>Chinmaya Vidyalaya</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <span class="dot"></span>
-        <div class="timeline-content">
-          <h3>2022 – Present</h3><h4>Bachelor's in ECE</h4><p>BIT Mesra</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section skills">
-    <h2 class="section-title">Skills</h2>
+  <section id="skills" class="skills-section">
+    <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
-      <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"><span>MySQL</span></div>
-      <div class="skill-card"><img src="https://img.icons8.com/color/48/000000/ms-excel.png"><span>Excel</span></div>
-      <div class="skill-card"><img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png"><span>Scikit‑learn</span></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /> Python</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" /> SQL</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" /> Pandas</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" /> NumPy</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /> Git</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /> GitHub</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" /> TensorFlow</div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" /> Keras</div>
+      <!-- Excel and Scikit-learn to be fixed below -->
+      <div class="skill"><img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel" /> Excel</div>
+      <div class="skill"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" /> Scikit-learn</div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section projects">
-    <h2 class="section-title">Projects</h2>
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
     <div class="projects-grid">
-      <div class="project-card"><span class="icon">📄</span><h3>Portfolio Website</h3><p>This site built with HTML/CSS/JS.</p></div>
-      <div class="project-card"><span class="icon">📊</span><h3>Netflix Data Analysis</h3><p>Used Python & Pandas to find insights.</p></div>
-      <div class="project-card"><span class="icon">👨‍💻</span><h3>Coders of Delhi</h3><p>Community mentoring & resource sharing.</p></div>
-      <div class="project-card"><span class="icon">📁</span><h3>IEPL Internship Dashboard</h3><p>Orica dispatch delay analysis using Excel/BI dashboards.</p></div>
+      <div class="project">
+        🌐 <strong>Portfolio Website</strong>
+        <p>This site was built using HTML, CSS, and JS to showcase my skills.</p>
+      </div>
+      <div class="project">
+        📊 <strong>Netflix Data Analysis</strong>
+        <p>Explored Netflix data using Python, Pandas, and visualization libraries.</p>
+      </div>
+      <div class="project">
+        👨‍💻 <strong>Coders of Delhi</strong>
+        <p>Community project sharing coding resources and mentoring.</p>
+      </div>
+      <div class="project">
+        🏢 <strong>ORICA IEPL Internship</strong>
+        <p>Engineering Intern in Data Analysis (July–Aug).</p>
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <h2 class="section-title">Contact</h2>
+  <section id="journey" class="journey-section">
+  <h2>My Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="date">2008 – 2020</span>
+      <h3>Matriculation</h3>
+      <p>Chinmaya Vidyalaya</p>
+    </div>
+    <div class="timeline-item">
+      <span class="date">2020 – 2022</span>
+      <h3>Intermediate</h3>
+      <p>Chinmaya Vidyalaya</p>
+    </div>
+    <div class="timeline-item">
+      <span class="date">2022 – Present</span>
+      <h3>Bachelor’s in ECE</h3>
+      <p>Birla Institute of Technology, Mesra</p>
+    </div>
+  </div>
+</section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
     <p>Email: <a href="mailto:harshitm.iiit@gmail.com">harshitm.iiit@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/">Profile</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/harshit-mohan-7ab027256/" target="_blank">Profile</a></p>
     <p>Phone: 8210178885</p>
   </section>
 
-  <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
-  <script src="./script.js"></script>
+  <button id="scrollToTopBtn" class="scroll-to-top">⬆️</button>
 </body>
 </html>
