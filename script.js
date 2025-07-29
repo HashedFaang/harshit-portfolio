@@ -1,15 +1,10 @@
-// Theme Toggle
+// Theme Toggle Button
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
-// Apply stored theme preference
+// Set default mode from localStorage
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
-}
-
-// Icon updater
-function updateThemeIcon() {
-  toggleBtn.textContent = body.classList.contains("dark") ? "🌙" : "☀️";
 }
 updateThemeIcon();
 
@@ -20,7 +15,11 @@ toggleBtn.addEventListener("click", () => {
   updateThemeIcon();
 });
 
-// Scroll-to-top button
+function updateThemeIcon() {
+  toggleBtn.textContent = body.classList.contains("dark") ? "🌙" : "☀️";
+}
+
+// Scroll to top button
 const scrollBtn = document.getElementById("scrollToTopBtn");
 window.addEventListener("scroll", () => {
   scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
@@ -29,12 +28,9 @@ scrollBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Mobile menu toggle
-const navLinks = document.querySelector(".nav-links");
-const menuToggle = document.createElement("button");
-menuToggle.classList.add("menu-toggle");
-menuToggle.innerHTML = "☰";
-document.querySelector(".navbar").prepend(menuToggle);
+// Mobile Nav Toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
