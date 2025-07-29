@@ -208,3 +208,65 @@ body.dark .project {
 .scroll-to-top:hover {
   background-color: #3730a3;
 }
+.journey-section {
+  padding: 80px 20px;
+  background: var(--section-bg);
+  text-align: center;
+}
+
+.journey-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background: #ccc;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  margin: 20px 0;
+  width: 45%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 55%;
+}
+
+.timeline-item .date {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 30px;
+  }
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 50px;
+  }
+}
